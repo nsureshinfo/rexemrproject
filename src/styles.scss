@@ -1,0 +1,143 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@progress/kendo-theme-default/scss/all";
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+@import "~@progress/kendo-theme-default/scss/all";
+
+.cusor-pointer {
+  cursor: pointer;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: #545454 !important;
+}
+.form-control:focus {
+  color: #495057 !important;
+  background-color: #fff !important;
+  border-color: #ced4da !important;
+  outline: 0 !important;
+  box-shadow: unset !important;
+}
+.margin-left-2vw {
+  margin-left: 2vw;
+}
+.margin-left-1vw {
+  margin-left: 1vw;
+}
+.margin-top-1vh {
+  margin-top: 1vh;
+}
+.margin-top-2vh {
+  margin-top: 2vh;
+}
+.margin-top-3vh {
+  margin-top: 3vh;
+}
+.margin-top-5vh {
+  margin-top: 5vh;
+}
+.modal-dialog {
+  max-width: 800px !important;
+  margin: 1.75rem auto !important;
+}
+.card-body {
+  flex: 1 1 auto !important;
+  padding: 1rem !important;
+}
+.save-btn, .cancel-btn {
+  background: #B90C2F !important;
+  border: none;
+  color: #fff;
+  padding: 5px 20px;
+}
+.save-btn:focus, .cancel-btn:focus {
+  outline: none !important;
+}
+.form-control, .custom-select  {
+  border-radius: unset !important;
+  color: #989898 !important;
+}
+.col-form-label {
+  padding-top: 0px !important;
+}
+.col-form-label b {
+  font-weight: 500 !important;
+  color: #545454 !important;
+}
+.input-xs {
+  height: 22px !important;
+  padding: 2px 5px !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  border-radius: 3px !important;
+}
+.form-group-bottom {
+  margin-bottom: 0.7rem !important;
+}
+.k-pager-numbers .k-state-selected, .k-pager-nav  {
+  color: #ffffff !important;
+  background-color: #B90C2F !important;
+}
+.k-pager-numbers .k-link:hover, .k-pager-nav:hover {
+  color: #ffffff !important;
+  background-color: #B90C2F !important;
+}
+.k-pager-numbers a.k-link{
+  color: #545454 !important;
+}
+.k-pager-numbers .k-link:focus {
+  box-shadow: unset !important;
+  color: #fff !important;
+}
+.k-pager-numbers a .k-state-selected a, .k-pager-nav a {
+  color: #fff !important;
+}
+
+.centerblock { display:table; margin:  auto;}
+.popupClose {
+    position: absolute;
+    top: 0;
+    right: -5vh;
+}
+header {
+    background: #ee2f35;
+    padding: 6vh 1vw 0vh 1vw;
+    height: 18vh;
+}
+
+.noPadding { padding :0 1px 0 0px !important}
+
+.bannerImg {
+    text-align: center;
+    background: url(assets/images/banner.png);
+    height: 53vh;
+    background-size: cover;
+    background-position: 0 0;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #ee2f35  !important;
+    border-color: #ffffff  !important;
+}
+
+.service {
+    padding-top: 2.5vh;
+    border-right: 1px solid #ee2f35;
+    padding-bottom: 2.5vh;
+}
+
+footer {
+    font-size: 1.8vh;
+    color: #ccc;
+}
+
+
+        .dropdown-menu.show a {
+            color: #000 !important;
+        }
+        .nav-item a {
+            color: #fff !important;
+        }
+        .dropdown-menu.show {
+            margin-top: 6px;
+        }
+

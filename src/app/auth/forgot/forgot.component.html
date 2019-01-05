@@ -1,0 +1,25 @@
+<div class="mt-3 col-md-10 centerblock">
+    <div class="position-relative mb-3 "><p class="h4 text-center">Forgot Password</p>
+      <div class="popupClose"><button aria-label="Close" class="close" type="button"   (click)="close()"><span aria-hidden="true">×</span></button></div>
+    </div>
+    
+    <p>Don't worry. Resetting your password is easy tell us your registed email ID</p>
+      <form [formGroup]="forgotPwd" (ngSubmit)="submitOtp()">
+        <div class="form-group">
+          <label>Registed email ID</label>
+          <input type="email" autofocus  [(ngModel)]="forgot" placeholder="Please email id" formControlName="forgot" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.forgot.errors }"
+          />
+          <div *ngIf="submitted && f.forgot.errors" class="invalid-feedback">
+              <div *ngIf="f.forgot.errors.required">Please enter Email </div>
+              <div *ngIf="f.forgot.errors.email">Email must be a valid email address</div>
+              
+          </div>
+        </div>
+      <p>We'll email you the instruction on how to teset your password</p>
+        <div class="form-group">
+          <button class="btn btn-primary">Send me the instructions</button>
+        </div>
+      </form>
+   
+  </div>
+   

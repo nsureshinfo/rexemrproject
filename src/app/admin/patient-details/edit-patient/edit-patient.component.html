@@ -1,0 +1,91 @@
+<div class="row edit-patient">
+  <div class="col-sm-12 col-md-12 col-xl-12 text-xs-center">
+    <div class="card">
+      <!--<ng4-spinner *ngIf="editsharedQueueSpinner && getFaxNumberSpinner">
+        <div class="label-permission-loader">
+          <div class="dept-loader-icon">
+            <img src="assets/images/Loader - GIF.gif" alt="Loader" />
+          </div>
+        </div>
+      </ng4-spinner>-->
+      <!-- Large modal -->
+      <div class="card-body" id="edit-patient-dialog">
+        <div class="border-bottom-1px-e8e8e8">
+          <div class="modal-header-popup">
+            <div class="row">
+              <div class="text-center col-md-12">
+                <div class=""><h3 class="text-center">Edit Patient</h3></div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body-content border-top-1px-e8e8e8">
+            <div class="margin-top-1vh">
+              <form>
+                <div class="form-group row">
+                  <div class="col-sm-6">
+                    <label for="FirstName" class="col-form-label"><b>First Name:</b></label>
+                    <input type="text" [(ngModel)]="getEditPatientData.FirstName" class="form-control" name="FirstName" id="FirstName" maxlength='32'>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="LastName" class="col-form-label"><b>Last Name:</b></label>
+                    <input type="text" [(ngModel)]="getEditPatientData.LastName" class="form-control" name="LastName" id="LastName" maxlength='32'>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-6">
+                    <label for="Gender" class="col-form-label"><b>Gender:</b></label>
+                    <select class="form-control custom-select mr-sm-2" id="Gender">
+                      <option>Choose Gender</option>
+                      <option selected value="1">Male</option>
+                      <option value="2">Female</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="HealthCardNumber" class="col-form-label"><b>Health Card Number:</b></label>
+                    <input type="text" [(ngModel)]="getEditPatientData.HealthCardNumber" class="form-control" name="HealthCardNumber" id="HealthCardNumber" maxlength='32'>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-6">
+                    <label for="HealthCardVersionCode" class="col-form-label"><b>Health Card Version Code:</b></label>
+                    <input type="text" [(ngModel)]="getEditPatientData.HealthCardVersionCode" class="form-control" name="HealthCardVersionCode" id="HealthCardVersionCode" maxlength='32'>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="HealthCardProvince" class="col-form-label"><b>Health Card Province:</b></label>
+                    <input type="text" [(ngModel)]="getEditPatientData.HealthCardProvince" class="form-control" name="HealthCardProvince" id="HealthCardProvince" maxlength='32'>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-6">
+                    <label for="HealthCardExpiryDate" class="col-form-label"><b>Health Card Expiry Date:</b></label>
+                    <input type="text" [(ngModel)]="getEditPatientData.HealthCardExpiryDate" class="form-control" name="HealthCardExpiryDate" id="HealthCardExpiryDate" maxlength='32'>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="ChartNumber" class="col-form-label"><b>Chart Number:</b></label>
+                    <input type="text" [(ngModel)]="getEditPatientData.ChartNumber" class="form-control" name="ChartNumber" id="ChartNumber" maxlength='32'>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-6">
+                    <label for="PreferredOfficialLanguage" class="col-form-label"><b>Preferred Official Language:</b></label>
+                    <input type="text" [(ngModel)]="getEditPatientData.PreferredOfficialLanguage" class="form-control" name="PreferredOfficialLanguage" id="PreferredOfficialLanguage" maxlength='32'>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="PrimaryPhysician" class="col-form-label"><b>Primary Physician:</b></label>
+                    <input type="text" [(ngModel)]="getEditPatientData.PrimaryPhysician" class="form-control" name="PrimaryPhysician" id="PrimaryPhysician" maxlength='32'>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer-buttons margin-top-3vh">
+          <button type="button" class="save-btn cusor-pointer" (click)="updatePatientDetails()" id="patient-update">Update</button>
+          <button type="button" (click)="closePopup()" class="cancel-btn margin-left-1vw cusor-pointer" id="edit-patient-cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,54 @@
+<!--<router-outlet></router-outlet>-->
+
+<div class="grid_view reports-datas">
+
+  <kendo-grid #patientGrid id="sqGridElement"
+              [data]="patientGridDataSource" [selectable]="selectableSettings"
+              [pageSize]="gridPagersInfo.pageSize"
+              [resizable]="true"
+              [skip]="gridPagersInfo.skip"
+              [pageable]="{type:'numeric'}"
+              [sortable]="{allowUnsort: true, mode:'single'}"
+              [sort]="sortingSettings"
+              (sortChange)="onSortChange($event)"
+              (edit)="onEditPatient($event)"
+              (remove)="onDeletePatient($event)"
+              [kendoGridSelectBy]="'id'"
+              [selectedKeys]="mySelection"
+              (pageChange)="pageChange($event)">
+    <kendo-grid-column *ngFor="let column of gridColumnsList" [field]="column.field" [title]="column.title"
+                       [minResizableWidth]="200">
+    </kendo-grid-column>
+    <kendo-grid-column field="gridsIcons" title="" width="200" class="grid-edit-delete">
+      <ng-template kendoGridCellTemplate let-dataItem>
+        <button class="k-primary k-button view-icon" (click)="onViewPatient(dataItem)"><img id="patient-view-icon" alt="delete" (mouseenter)="tooltipText='View Patient'"
+                                                                         [ngbTooltip]="popTemplate"
+                                                                         src="assets/images/svg/marked read.svg" /></button>
+        <button kendoGridEditCommand class="k-primary"><img id="patient-edit-icon" alt="edit" (mouseenter)="tooltipText='Edit Patient'" [ngbTooltip]="popTemplate"
+                                                            src="assets/images/svg/Edit.svg" /></button>
+        <button kendoGridRemoveCommand class="k-primary"><img id="patient-delete-icon" alt="delete" (mouseenter)="tooltipText='Delete Patient'"
+                                                              [ngbTooltip]="popTemplate" class="delete-icon"
+                                                              src="assets/images/svg/ic_delete_18px.svg" /></button>
+
+      </ng-template>
+    </kendo-grid-column>
+    <ng-template kendoPagerTemplate let-totalPages="totalPages" let-currentPage="currentPage">
+      <kendo-pager-prev-buttons></kendo-pager-prev-buttons>
+      <kendo-pager-info></kendo-pager-info>
+      <kendo-pager-numeric-buttons [buttonCount]="3"></kendo-pager-numeric-buttons>
+      <kendo-pager-next-buttons></kendo-pager-next-buttons>
+      <kendo-pager-page-sizes [pageSizes]="[5, 10, 20, 50, 100]"></kendo-pager-page-sizes>
+      <!--<span [ngbTooltip]="popTemplate" (mouseenter)="tooltipText='Refresh'"
+            (click)="onRefreshGridData()" class="pull-right refresh-grid"
+            id="patient-refresh">
+          <img class="refresh-icon"
+               src="assets/images/svg/ic_refresh_18px.svg"
+               alt="Refresh" />
+        </span>-->
+    </ng-template>
+  </kendo-grid>
+</div>
+<ng-template #popTemplate>
+  <div class="tooltip-ui font-size14px">{{tooltipText}}</div>
+</ng-template>
+

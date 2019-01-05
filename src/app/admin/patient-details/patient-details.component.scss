@@ -1,0 +1,34 @@
+.delete-icon {
+  width: 1.25vw;
+}
+
+.k-button {
+  background-clip: padding-box;
+  margin: 5px;
+}
+
+.k-button.k-primary:hover {
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.08);
+  background-image: none;
+}
+
+.k-button.k-primary:focus, .k-button.k-primary.k-state-focused {
+  box-shadow: unset;
+}
+
+.grid_view .k-grid-content tr td.grid-edit-delete .k-button {
+  background: transparent !important;
+  border: none;
+  margin: 0 !important;
+  padding: 0;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.view-icon {
+  border-color: rgba(0, 0, 0, 0.08);
+  color: #656565;
+  background-color: #f6f6f6;
+  background-image: linear-gradient(#f6f6f6, #f1f1f1);
+}

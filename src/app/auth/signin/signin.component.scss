@@ -1,0 +1,21 @@
+ 
+.btn-primary , .btn-primary:hover {
+    background-color: #fff !important;
+    border-color: #ee2f35;
+    color: #ee2f35;
+}
+
+.invalid-feedback { color : #fff;     display: block !important;
+    position: absolute;
+    top: -26px;}
+
+    .form-group {
+        margin-bottom: 0.2rem;
+    }
+    .forgot {     text-align: right;
+        color: #f1afb2;
+        font-size: 14px; cursor: pointer;}
+        .modal {
+            position: fixed;
+            top: 16vh !important;
+        }
